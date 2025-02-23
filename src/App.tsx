@@ -6,8 +6,6 @@ import { Home } from "./Pages/Home";
 
 export default function App() {
 
-
-
     return (
         <div className="min-h-screen bg-custom-1 flex flex-col">
             <BrowserRouter>
