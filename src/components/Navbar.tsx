@@ -4,12 +4,17 @@ import { Search } from "../icons/Search"
 import { Button } from "./ui/Button"
 import { Input } from "./ui/Input"
 
+import { useNavigate } from "react-router-dom"
+
 export const Navbar = () => {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <div className="flex items-center justify-between">
                 <div>
-                    <img src="logo.png" alt="BusinessLogo" className="w-32 md:w-44" />    
+                    <img onClick={() => {navigate("")}} src="logo.png" alt="BusinessLogo" className="w-32 md:w-44 cursor-pointer" />    
                 </div>
 
                 <div className="flex gap-x-5 text-xl cursor-pointer text-custom4">
@@ -24,7 +29,7 @@ export const Navbar = () => {
                     <div className="transition-all duration-500 hover:-translate-y-2 cursor-pointer">
                         <Cart/>
                     </div>
-                    <Button variant="primary" text="LogIn"/>
+                    <Button variant="primary" onClick={() => {navigate("login")}} text="LogIn"/>
                 </div>
 
             </div>           
