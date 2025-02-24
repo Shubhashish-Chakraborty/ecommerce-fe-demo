@@ -35,10 +35,10 @@ export const Home = () => {
 
                 <div className="flex justify-center items-center cursor-pointer gap-x-20">
                     <div>
-                        <img onClick={() => {navigate("/signup")}} src="menCollection.png" className="w-80" alt="" />
+                        <img onClick={() => {navigate("/signup")}} src="menCollection.png" className="w-80 hover:scale-105 transition-all duration-500" alt="" />
                     </div>
                     <div>
-                        <img onClick={() => {navigate("/signup")}} src="womenCollection.png" className="w-80" alt="" />
+                        <img onClick={() => {navigate("/signup")}} src="womenCollection.png" className="w-80 hover:scale-105 transition-all duration-500" alt="" />
                     </div>
                 </div>
 
