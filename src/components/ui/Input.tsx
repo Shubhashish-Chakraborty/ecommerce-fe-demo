@@ -4,18 +4,17 @@ interface InputProps {
     type: string;
     placeholder: string;
     startIcon?: ReactElement;
+    className?: string;
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-    ({ type, placeholder, startIcon }, ref) => {
+    ({ type, placeholder, startIcon, className }, ref) => {
         return (
-            <div className="bg-slate-200 flex py-3 px-6 gap-3 min-w-96 max-w-md rounded-3xl">
-                <div className="">
-                    {startIcon}
-                </div>
+            <div className={`bg-slate-200 flex items-center w-full py-3 px-4 gap-3 rounded-3xl ${className}`}>
+                {startIcon && <div className="text-gray-600">{startIcon}</div>}
                 <input
                     ref={ref}
-                    className="w-full px-1 placeholder-text font-bold text-black outline-none"
+                    className="w-full bg-transparent text-black font-bold outline-none placeholder-gray-500"
                     type={type}
                     placeholder={placeholder}
                 />
@@ -24,4 +23,4 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     }
 );
 
-Input.displayName = "Input"; // For React DevTools
+Input.displayName = "Input";
